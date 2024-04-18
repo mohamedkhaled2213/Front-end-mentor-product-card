@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --color-primary-900: hsl(212, 21%, 14%);
+  --color-primary-700: hsl(158, 36%, 37%);
+  --color-primary-500: hsl(228, 12%, 48%);
+  --color-primary-200: hsl(30, 38%, 92%);
+  --color-primary-100: hsl(0, 0%, 100%);
+
+  --heading-Monts: "Montserrat", sans-serif;
+  --heading-fraunce: "Fraunces", serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-primary-200);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main {
+  padding: 1rem;
+  display: grid;
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+  }
+}
+
+main picture img {
+  border-radius: 10px;
+}
+
+main .product_content {
+  background: white;
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+  padding: 0.5rem 1.6rem;
+  font-family: var(--heading-Monts);
+  color: var(--color-primary-500);
+}
+
+main .product_content .product_title {
+  margin-top: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+main .product_content h1 {
+  font-family: var(--heading-fraunce);
+  color: var(--color-primary-900);
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+main .product_content .product_describtion {
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 10px 0;
+}
+
+main .product_content .flex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+main .product_content .flex .product_price {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-primary-700);
+}
+
+main .product_content .flex .product_original-price {
+  font-size: 13px;
+}
+
+main .product_content .button {
+  padding: 13px 10px;
+  background: var(--color-primary-700);
+  border: 0;
+  color: var(--color-primary-100);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+main .product_content .button:hover {
+  background: hsl(158, 36%, 17%);
+}
